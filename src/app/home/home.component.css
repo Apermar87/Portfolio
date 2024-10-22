@@ -1,0 +1,80 @@
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contenedor_texto {
+    text-align: center;
+}
+
+.subtitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 20px;
+}
+
+.contenedor_texto_animacion {
+    display: flex;
+    font-size: 2rem;
+    color: #333;
+    text-decoration: underline #007bff;
+}
+
+.barra_escritura {
+    width: 3px;
+    height: 50px;
+    margin-left: 5px;
+    background-color: #181818;
+    transform: rotateZ(10deg);
+    animation: barra-animacion 1s ease infinite;
+}
+
+p {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Estilos para el botón */
+.btn-ir-about {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff; /* Color de fondo azul */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo mano para indicar que es clicable */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animación suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Efecto hover */
+.btn-ir-about:hover {
+    background-color: #0077b5; /* Oscurece el color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Efecto para cuando se presiona el botón */
+.btn-ir-about:active {
+    background-color: #004080; /* Color más oscuro cuando se presiona */
+    transform: scale(0.98); /* Reduce ligeramente el tamaño al presionar */
+}
+
+
+@keyframes barra-animacion {
+    50% {
+        height: 20px;
+    }
+}

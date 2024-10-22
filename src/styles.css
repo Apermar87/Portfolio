@@ -54,47 +54,54 @@ html {
 
 .sidebar .social-links a i {
   font-size: 30px;
-  color: white;
+  color: #A8A9B4;
 }
-
 
 /* Opción para cambiar el tamaño al pasar el ratón (hover) */
 .sidebar .social-links a:hover i {
   color: #0077b5;
-  /* Cambia el color al hacer hover (azul de LinkedIn) */
+  transform: scale(1.40);
+}
+
+.sidebar .social-links a:active i {
+  background-color: #004080; /* Color más oscuro cuando se presiona */
+  transform: scale(0.98); /* Reduce ligeramente el tamaño al presionar */
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
-  margin: 0;
   flex-grow: 1;
-  /* Ocupa el espacio vertical restante */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* Centra verticalmente las secciones */
 }
 
 .sidebar ul li {
-  margin: 25px 0;
+  margin: 25px;
 }
 
 .sidebar ul li a {
-  color: white;
+  color: #A8A9B4;
   text-decoration: none;
+  font-size: 18px;
+}
+
+/* Estilo para el enlace activo */
+.sidebar ul li a.active {
+  color: #0077b5;
+  font-weight: bold;
 }
 
 .sidebar ul li a:hover {
-  text-decoration: underline;
-  color: #0077b5;
+  color: white;
 }
 
 /* Contenido principal */
 .content {
-  margin-left: 270px;
+  margin-left: 250px;
   /* Deja espacio para la barra lateral */
-  padding: 20px;
+
   flex-grow: 1;
 }
 
