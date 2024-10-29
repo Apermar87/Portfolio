@@ -67,7 +67,8 @@
               "buildTarget": "portafolio:build:production"
             },
             "development": {
-              "buildTarget": "portafolio:build:development"
+              "buildTarget": "portafolio:build:development",
+              "host": "0.0.0.0"  
             }
           },
           "defaultConfiguration": "development"
