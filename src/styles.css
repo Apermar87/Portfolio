@@ -106,7 +106,7 @@ html {
 }
 
 section {
-  height: 100vh;
+  height: 70vh;
   /* Cada sección ocupa la pantalla completa */
   padding: 20px;
 }

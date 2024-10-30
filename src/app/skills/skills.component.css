@@ -86,16 +86,8 @@ body {
     font-size: 18px;
     font-weight: thin;
     color: #808080;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    line-height: 1;
-}
-.subject img {
-    margin-left: 8px;
-    width: 35px;
-    height: 30px;
 }
 .progress-bar{
     position: relative;
@@ -156,4 +148,98 @@ body {
     .row .col:nth-child(2){
         margin-top: 20px;
     }
+}
+.service{
+    background: #F4FAFD;
+    width: 100%;
+    padding: 20px 0%;
+}
+.title h2{
+    color: #242223;
+    font-size: 40px;
+    margin: 30px auto;
+    max-width: 100%;
+    text-align: center;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 80%;
+        margin: 15px auto; 
+    }
+    .title h2 {
+        font-size: 32px; 
+    }
+}
+
+@media (max-width: 568px) {
+
+    .box {
+        flex-direction: column; 
+    }
+    .card {
+        width: 90%; 
+    }
+    .title h2 {
+        font-size: 28px; 
+    }
+}
+.card{
+    height: 365px;
+    width: 335px;
+    padding: 20px 35px;
+    background: #191919;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    view-timeline-name: --reveal;
+    animation-name: show;
+    animation-fill-mode: both;
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+@keyframes show{
+    from {
+        opacity: 0; scale: 10%;
+    }
+    to {
+        opacity: 1; scale: 100%;
+    }
+}
+.card i{
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+    color: #119DDD;
+}
+.card i:hover{
+    color: white;
+}
+h5{
+    color: white;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+.pra p{
+    color: #A8A9B4;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
 }
