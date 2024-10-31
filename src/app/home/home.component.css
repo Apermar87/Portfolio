@@ -48,22 +48,23 @@ p {
 
 /* Estilos para el botón */
 .btn-ir-about {
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
+    background-color: #007bff;
     color: white;
-    background-color: #007bff; /* Color de fondo azul */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cursor tipo mano para indicar que es clicable */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Animación suave */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    text-decoration: none;
+    border:  2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
 }
 
 /* Efecto hover */
 .btn-ir-about:hover {
-    background-color: #0077b5; /* Oscurece el color de fondo al pasar el ratón */
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    background-color: transparent;
+    transform: scale(1.10);
+    border: 2px solid #007bff;
+    cursor: pointer;
+   color:  #181818;
 }
 
 /* Efecto para cuando se presiona el botón */
