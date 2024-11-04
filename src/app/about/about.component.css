@@ -1,22 +1,22 @@
 .about {
     width: 100%;
     min-height: 100vh;
+    padding-top: 30px;
 }
 
 .main {
-    width: 1130px;
-    max-width: 95%;
+    width: 100%; /* Cambiado a 100% para mayor flexibilidad */
+    max-width: 1130px; /* Establecido el ancho máximo */
     margin: 0 auto;
     display: flex;
     align-items: flex-start;
+    gap: 30px;
     flex-wrap: wrap;
-    position: relative;
 }
 
 .about-info {
     width: 100%;
     margin-bottom: 20px;
-    font-family: helvetica;
 }
 
 .about-info h2 {
@@ -27,7 +27,8 @@
     display: inline-block;
     margin-bottom: 30px;
 }
-.about-info h2::before{
+
+.about-info h2::before {
     content: '';
     position: absolute;
     width: 50%;
@@ -36,62 +37,170 @@
     background-color: #119DDD;
 }
 
-.row .sub-title h2{
-    position: relative;
-    color: #242223;
-    font-size: 22px;
-    font-family: helvetica;
-    display: inline-block;
-    margin-bottom: 30px;
-}
-
-
 .about-info p {
     color: #242223;
     font-size: 18px;
     margin-bottom: 30px;
     line-height: 1.6;
 }
+.about-column{
+    display: flex;
+    width: 100%;
+}
 
 .about img {
-    height: 400px;
-    width: 450px;
+    height: 600px;
+    width: 800px;
     margin-bottom: 20px;
 }
 
 .about-text {
-    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.about-text a {
+    text-decoration: none;
+    color: inherit; 
+    font-weight: normal;
 }
 
 .about-text h5 {
     color: #242223;
     letter-spacing: 2px;
     font-size: 22px;
-    margin-bottom: 25px;
-    text-transform: capitalize;
+    margin: 5px 0px;
 }
 
 .about-text span {
     color: red;
 }
 
+.intro-text {
+    color: #242223;
+    margin-left: 20px;
+    text-align: start;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.column p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #242223;
+    margin: 5px 0;
+    position: relative;
+    padding-left: 20px; 
+}
+
+.column p::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: #119DDD;
+    font-weight: bold;
+}
+
+.column p strong {
+color: #242223;
+font-size: 18px;
+line-height: 1.6;
+}
+
+.additional-info {
+    color: #242223;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-align: start;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
 button {
-    background-color: #007bff;
+    background-color: #119DDD;
     color: white;
     text-decoration: none;
-    border: 2px solid transparent;
+    border:  2px solid transparent;
     font-weight: bold;
     padding: 13px 30px;
     border-radius: 30px;
-    transition: 0.4s;
+    transition: .4s;
+    line-height: 1.6;
+    font-size: 18px;
 }
 
 button:hover {
     background-color: transparent;
+    transform: scale(1.10);
     border: 2px solid #007bff;
     cursor: pointer;
-    transform: scale(1.10);
+   color:  #181818;
+}
+/* Media Queries para mayor responsividad */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Apilar elementos en pantallas pequeñas */
+        align-items: center; /* Centrar contenido */
+    }
+
+    .about img {
+        width: 339px; /* Establecer ancho específico para la imagen */
+        height: 339px; /* Establecer alto específico para la imagen */
+        margin-bottom: 20px; /* Margen inferior para espacio con el contenido */
+    }
+
+    .about-info h2 {
+        font-size: 24px; /* Ajustar tamaño del título */
+    }
+
+    .about-info p {
+        font-size: 16px; /* Ajustar tamaño del texto */
+    }
+
+    .about-text h5 {
+        font-size: 20px; /* Ajustar tamaño de texto */
+    }
+
+    .details {
+        flex-direction: column; /* Cambiar dirección de las columnas */
+        gap: 20px; /* Espacio entre columnas */
+        align-items: center; /* Centrar columnas */
+        margin-left: 0; /* Ajustar margen */
+    }
+
+    .about-column {
+        flex-direction: column; /* Asegura que los elementos se apilen en pantallas pequeñas */
+        align-items: center; /* Centrar el contenido */
+    }
+
+    .column {
+        width: 100%; /* Asegurar que las columnas ocupen el 100% en pantallas pequeñas */
+    }
+
+    .additional-info,
+    .intro-text {
+        margin-left: 0; /* Ajustar márgenes */
+        text-align: center; /* Centrar texto */
+    }
+
+    button {
+        padding: 10px 20px; /* Ajustar tamaño del botón */
+        font-size: 16px; /* Ajustar tamaño de fuente del botón */
+    }
 }
