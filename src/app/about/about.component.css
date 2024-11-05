@@ -1,12 +1,8 @@
 .about {
-    width: 100%;
-    min-height: 100vh;
-    padding-top: 30px;
+    padding: 2rem 12% 2rem;
 }
 
 .main {
-    width: 100%; /* Cambiado a 100% para mayor flexibilidad */
-    max-width: 1130px; /* Establecido el ancho máximo */
     margin: 0 auto;
     display: flex;
     align-items: flex-start;
@@ -17,24 +13,6 @@
 .about-info {
     width: 100%;
     margin-bottom: 20px;
-}
-
-.about-info h2 {
-    position: relative;
-    color: #242223;
-    font-size: 30px;
-    font-family: helvetica;
-    display: inline-block;
-    margin-bottom: 30px;
-}
-
-.about-info h2::before {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 3px;
-    top: calc(125% - 1px);
-    background-color: #119DDD;
 }
 
 .about-info p {

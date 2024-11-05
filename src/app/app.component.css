@@ -1,0 +1,146 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Barra lateral fija */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #040B14;
+  padding-top: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centra verticalmente los elementos */
+}
+
+.sidebar .profile-picture img {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.sidebar .social-links {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  /* Centra los iconos horizontalmente */
+  gap: 25px;
+  /* Espacio entre los iconos */
+}
+
+.sidebar .social-links a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar .social-links a i {
+  font-size: 30px;
+  color: #A8A9B4;
+}
+
+/* Opción para cambiar el tamaño al pasar el ratón (hover) */
+.sidebar .social-links a:hover i {
+  color: #0077b5;
+  transform: scale(1.40);
+}
+
+.sidebar .social-links a:active i {
+  background-color: #004080; /* Color más oscuro cuando se presiona */
+  transform: scale(0.98); /* Reduce ligeramente el tamaño al presionar */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar ul li {
+  margin: 25px;
+}
+
+.sidebar ul li a {
+  color: #A8A9B4;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Estilo para el enlace activo */
+.sidebar ul li a.active {
+  color: #0077b5;
+  font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+  color: white;
+}
+
+/* Contenido principal */
+.content {
+  margin-left: 250px;
+  /* Deja espacio para la barra lateral */
+
+  flex-grow: 1;
+}
+
+section {
+  height: 70vh;
+  /* Cada sección ocupa la pantalla completa */
+  padding: 20px;
+}
+
+section h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+/* Para móviles */
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    /* Cambia la dirección a columna en pantallas pequeñas */
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    /* Permite que la barra lateral se ajuste */
+    position: relative;
+  }
+
+  .content {
+    margin-left: 0;
+    /* Elimina el margen para que ocupe toda la pantalla */
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    /* Menú horizontal */
+  }
+}
+
+/* Para tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+    /* Ajusta el ancho de la barra lateral para tablets */
+  }
+
+  .content {
+    margin-left: 200px;
+    /* Ajusta el margen en tablets */
+  }
+}
