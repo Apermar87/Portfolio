@@ -1,6 +1,12 @@
 .resume-header {
-    padding: 2rem 12% 2rem;
+    padding: 2rem 4% 2rem;
 }
+
+@media (min-width: 1920px) {
+    .resume-header {
+      padding: 2rem 12% 2rem;
+    }
+  }
 
 .resume-header p {
     font-size: 1.2rem;
@@ -12,8 +18,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 12% 2rem;
+    padding: 2rem 4% 2rem;
 }
+
+@media (min-width: 1920px) {
+    .timeline-wrapper {
+        padding: 2rem 12% 2rem;
+    }
+}
+
 .timeline-row{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -43,6 +56,7 @@
     border: 3px solid red;
 }
 .timeline-box{
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -60,4 +74,28 @@ background-color: #119DDD;
 border-radius: 50%;
 left: -50px;
 top: 90px;
+}
+.animate{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 103%;
+    height: 100%;
+    background: white;
+    animation: show-right 1s ease forwards;
+    animation-delay: calc(.5s * var(--i));
+}
+  
+  h3::before {
+    width: 0;
+  }
+  
+  h3::after {
+    width: 0;
+  }
+
+@keyframes show-right {
+    100%{
+        width: 0;
+    }
 }

@@ -1,6 +1,12 @@
 .about {
-    padding: 2rem 12% 2rem;
+    padding: 2rem 4% 2rem;
 }
+
+@media (min-width: 1920px) {
+    .about {
+      padding: 2rem 12% 2rem;
+    }
+  }
 
 .main {
     margin: 0 auto;
@@ -48,7 +54,7 @@
     color: #242223;
     letter-spacing: 2px;
     font-size: 22px;
-    margin: 5px 0px;
+    margin-bottom: 20px;
 }
 
 .about-text span {
@@ -67,8 +73,7 @@
     display: flex;
     justify-content: center;
     gap: 100px;
-    margin-bottom: 25px;
-    margin-left: 20px;
+    margin: 25px 20px;
     text-align: left;
 }
 
