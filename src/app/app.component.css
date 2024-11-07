@@ -54,8 +54,10 @@
 }
 
 .sidebar .social-links a:active i {
-  background-color: #004080; /* Color más oscuro cuando se presiona */
-  transform: scale(0.98); /* Reduce ligeramente el tamaño al presionar */
+  background-color: #004080;
+  /* Color más oscuro cuando se presiona */
+  transform: scale(0.98);
+  /* Reduce ligeramente el tamaño al presionar */
 }
 
 .sidebar ul {
@@ -68,13 +70,13 @@
 }
 
 .sidebar ul li {
-  margin: 25px;
+  margin: 20px;
 }
 
 .sidebar ul li a {
   color: #A8A9B4;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
 /* Estilo para el enlace activo */

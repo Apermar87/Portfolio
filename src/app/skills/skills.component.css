@@ -4,13 +4,13 @@
 
 @media (min-width: 1920px) {
     .container-skills {
-      padding: 2rem 12% 2rem;
+        padding: 2rem 12% 2rem;
     }
-  }
+}
 
 .main-title p {
-    line-height: 1.6;
-    font-size: 18px;
+    font-size: 1.2rem;
+    color: #333;
 }
 
 .container-skills .row {
@@ -25,10 +25,10 @@
 }
 
 .subject {
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: thin;
     color: #808080;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     text-transform: uppercase;
 }
 
@@ -47,7 +47,7 @@
     top: -35px;
     right: 0;
     color: #808080;
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 
 .progress-line {
@@ -84,13 +84,13 @@
     padding: 20px 0%;
 }
 
-.title{
+.title {
     text-align: center;
 }
 
 .service .title h2::before {
     width: 100%;
-  }
+}
 
 .box {
     display: flex;
@@ -151,18 +151,13 @@
 
 .pra p {
     color: #A8A9B4;
-    font-size: 16px;
-    line-height: 27px;
+    font-size: 1.2rem;
     margin-bottom: 25px;
 }
 
 @media(max-width: 568px) {
     .container-skills .row {
         flex-direction: column;
-    }
-
-    .container-skills .main-title h1 {
-        font-size: 36px;
     }
 
     .container-skills .row {
@@ -180,10 +175,6 @@
     .card {
         width: 90%;
     }
-
-    .title h2 {
-        font-size: 28px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -195,10 +186,6 @@
     .card {
         width: 80%;
         margin: 15px auto;
-    }
-
-    .title h2 {
-        font-size: 32px;
     }
 
     .container-skills {
