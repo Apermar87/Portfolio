@@ -12,8 +12,16 @@
       <a href="https://github.com/Apermar87" target="_blank"><i class="fab fa-github"></i></a>
     </div>
 
+    <!-- Hamburguesa -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+
     <!-- Enlaces a las secciones -->
-    <ul>
+    <ul class="nav-links">
       <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" [routerLinkActiveOptions]="{ exact: true }">Inicio</a></li>
       <li><a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">Sobre mí</a></li>
       <li><a routerLink="/resume" routerLinkActive="active" ariaCurrentWhenActive="page">Resumen</a></li>
@@ -24,7 +32,7 @@
   </nav>
 
   <!-- Contenido principal gestionado por Angular -->
-  <div class="content">
+  <div class="content" id="main-content">
     <router-outlet></router-outlet>
   </div>
 </div>

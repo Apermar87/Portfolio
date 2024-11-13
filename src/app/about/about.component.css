@@ -4,9 +4,9 @@
 
 @media (min-width: 1920px) {
     .about {
-      padding: 2rem 12% 2rem;
+        padding: 2rem 12% 2rem;
     }
-  }
+}
 
 .main {
     margin: 0 auto;
@@ -14,6 +14,8 @@
     align-items: flex-start;
     gap: 30px;
     flex-wrap: wrap;
+    max-width: 100%;
+    /* Asegura que no se desborde horizontalmente */
 }
 
 .about-info {
@@ -28,14 +30,14 @@
     line-height: 1.6;
 }
 
-.about-column{
+.about-column {
     display: flex;
     width: 100%;
+    gap: 20px;
 }
 
 .about img {
-    height: 600px;
-    width: 800px;
+    max-width: 350px;
     margin-bottom: 20px;
 }
 
@@ -43,11 +45,12 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-top: 10px;
 }
 
 .about-text a {
     text-decoration: none;
-    color: inherit; 
+    color: inherit;
     font-weight: normal;
 }
 
@@ -88,7 +91,7 @@
     font-size: 1.2rem;
     margin: 5px 0;
     position: relative;
-    padding-left: 20px; 
+    padding-left: 20px;
 }
 
 .column p::before {
@@ -116,7 +119,7 @@ button {
     background-color: #119DDD;
     color: white;
     text-decoration: none;
-    border:  2px solid transparent;
+    border: 2px solid transparent;
     font-weight: bold;
     padding: 13px 30px;
     border-radius: 30px;
@@ -130,40 +133,105 @@ button:hover {
     transform: scale(1.10);
     border: 2px solid #007bff;
     cursor: pointer;
-   color:  #181818;
+    color: #181818;
 }
+
 /* Media Queries para mayor responsividad */
 @media (max-width: 768px) {
     .main {
-        flex-direction: column; /* Apilar elementos en pantallas pequeñas */
-        align-items: center; /* Centrar contenido */
+        flex-direction: column;
+        /* Apilar elementos en pantallas pequeñas */
+        align-items: center;
+        /* Centrar contenido */
     }
 
     .about img {
-        width: 339px; /* Establecer ancho específico para la imagen */
-        height: 339px; /* Establecer alto específico para la imagen */
-        margin-bottom: 20px; /* Margen inferior para espacio con el contenido */
+        width: 339px;
+        /* Establecer ancho específico para la imagen */
+        height: 339px;
+        /* Establecer alto específico para la imagen */
+        margin-bottom: 20px;
+        /* Margen inferior para espacio con el contenido */
     }
 
     .details {
-        flex-direction: column; /* Cambiar dirección de las columnas */
-        gap: 20px; /* Espacio entre columnas */
-        align-items: center; /* Centrar columnas */
-        margin-left: 0; /* Ajustar margen */
+        flex-direction: column;
+        /* Cambiar dirección de las columnas */
+        gap: 20px;
+        /* Espacio entre columnas */
+        align-items: center;
+        /* Centrar columnas */
+        margin-left: 0;
+        /* Ajustar margen */
     }
 
     .about-column {
-        flex-direction: column; /* Asegura que los elementos se apilen en pantallas pequeñas */
-        align-items: center; /* Centrar el contenido */
+        flex-direction: column;
+        /* Asegura que los elementos se apilen en pantallas pequeñas */
+        align-items: center;
+        /* Centrar el contenido */
     }
 
     .column {
-        width: 100%; /* Asegurar que las columnas ocupen el 100% en pantallas pequeñas */
+        width: 100%;
+        /* Asegurar que las columnas ocupen el 100% en pantallas pequeñas */
     }
 
     .additional-info,
     .intro-text {
-        margin-left: 0; /* Ajustar márgenes */
-        text-align: center; /* Centrar texto */
+        margin-left: 0;
+        /* Ajustar márgenes */
+        text-align: center;
+        /* Centrar texto */
+    }
+}
+
+/* Media Query para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main {
+        flex-direction: column;
+        /* Apilar elementos en pantallas pequeñas */
+        align-items: center;
+        /* Centrar contenido */
+    }
+
+    .about img {
+        width: 550px;
+        /* Establecer ancho específico para la imagen */
+        height: 550px;
+        /* Establecer alto específico para la imagen */
+        margin-bottom: 20px;
+        /* Margen inferior para espacio con el contenido */
+    }
+
+    .details {
+        flex-direction: column;
+        /* Cambiar dirección de las columnas */
+        gap: 20px;
+        /* Espacio entre columnas */
+        align-items: center;
+        /* Centrar columnas */
+        margin-left: 0;
+        /* Ajustar margen */
+    }
+
+    .about-column {
+        flex-direction: column;
+        /* Asegura que los elementos se apilen en pantallas pequeñas */
+        align-items: center;
+        /* Centrar el contenido */
+    }
+
+    .column {
+        width: 100%;
+        /* Asegurar que las columnas ocupen el 100% en pantallas pequeñas */
+    }
+
+    .additional-info,
+    .intro-text {
+        margin-left: 0;
+        /* Ajustar márgenes */
+        text-align: center;
+        /* Centrar texto */
     }
 }
