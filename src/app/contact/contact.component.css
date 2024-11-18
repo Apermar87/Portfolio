@@ -1,0 +1,21 @@
+.resume-header {
+    padding: 2rem 4% 2rem;
+}
+
+@media (min-width: 1920px) {
+    .resume-header {
+        padding: 2rem 12% 2rem;
+    }
+}
+
+.resume-header p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+    font-weight: bold;
+}

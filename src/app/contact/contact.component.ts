@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import emailjs from '@emailjs/browser';
 
 interface ContactForm {
   name: string;
@@ -36,8 +35,13 @@ export class ContactComponent {
       template_id: "template_88mq6y1",
       template_params: this.form,
       user_id: "VSQZm6xzmwWJQJMT-",
-    }).subscribe(() => {
-      console.log('sent!');
-    })
+    },
+      {
+          responseType: 'text',
+      }
+    )
+      .subscribe(() => {
+        console.log('sent!');
+      });
   }
 }
