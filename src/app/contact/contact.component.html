@@ -3,12 +3,30 @@
     <p>Ponte en contacto o envíame un correo electrónico directamente a <a href="mailto:ajperezmarin@gmail.com">
         ajperezmarin&#64;gmail.com</a></p>
 </div>
-<input type="text" placeholder="Name" [(ngModel)]="form.name">
-<br>
-<input type="email" placeholder="Email"  [(ngModel)]="form.email">
-<br>
-<input type="text" placeholder="Phone"  [(ngModel)]="form.phone">
-<br>
-<textarea placeholder="Message"  [(ngModel)]="form.message"></textarea>
-<br>
-<button (click)="send()">Send</button>
+
+<div class="contact-section">
+    <!-- Left Column -->
+    <div class="contact-left">
+      <img src="pngegg.png" alt="Profile Image" class="profile-image">
+      <h2>Antonio Jesús Pérez Marín</h2>
+      <h3>Programador Fullstack</h3>
+      <p>Con experiencia en desarrollo web, tanto front-end como back-end, utilizando tecnologías como Java, Angular, y más.</p>
+      <p><strong>Teléfono:</strong> 627327899</p>
+      <p><strong>Email:</strong> <a href="mailto:ajperezmarin@gmail.com">ajperezmarin&#64;gmail.com</a></p>
+      <p>Encuéntrame en:</p>
+      <button onclick="window.open('https://github.com/tu-usuario', '_blank')" class="social-button">GitHub</button>
+      <button onclick="window.open('https://www.linkedin.com/in/tu-usuario', '_blank')" class="social-button">LinkedIn</button>
+    </div>
+  
+    <!-- Right Column: Contact Form -->
+    <div class="contact-right">
+      <h2>Contacto</h2>
+      <input type="text" placeholder="Nombre" [(ngModel)]="form.name" required>
+      <input type="tel" placeholder="Teléfono" [(ngModel)]="form.phone" required>
+      <input type="email" placeholder="Email" [(ngModel)]="form.email" required>
+      <input type="text" placeholder="Asunto" [(ngModel)]="form.subject" required>
+      <textarea placeholder="Mensaje" [(ngModel)]="form.message" required></textarea>
+      <button (click)="send()">Enviar Mensaje</button>
+    </div>
+  </div>
+  

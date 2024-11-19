@@ -19,3 +19,52 @@ a {
     font-weight: normal;
     font-weight: bold;
 }
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Asegura que las columnas tengan la misma altura */
+  gap: 20px; /* Espaciado entre las columnas */
+}
+
+.contact-left, .contact-right {
+  flex: 1; /* Asegura que ambas columnas tengan el mismo ancho */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  height: 400px; /* Ajusta la altura según tus necesidades para crear el efecto cuadrado */
+}
+
+.contact-left {
+  align-items: center; /* Centra el contenido en la columna izquierda */
+}
+
+.contact-left img {
+  max-width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.contact-right input, .contact-right textarea, .contact-right button {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-right button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-right button:hover {
+  background-color: #0056b3;
+}
