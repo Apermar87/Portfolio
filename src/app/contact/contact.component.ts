@@ -46,4 +46,11 @@ export class ContactComponent {
         console.log('sent!');
       });
   }
+
+  adjustHeight(event: Event): void {
+    const textarea = event.target as HTMLTextAreaElement;
+    textarea.style.height = 'auto';
+    textarea.style.height = `${textarea.scrollHeight}px`;
+  }
+  
 }

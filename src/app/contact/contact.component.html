@@ -1,32 +1,59 @@
-<div class="resume-header">
-    <h2>Contacto</h2>
-    <p>Ponte en contacto o envíame un correo electrónico directamente a <a href="mailto:ajperezmarin@gmail.com">
-        ajperezmarin&#64;gmail.com</a></p>
+<div class="contact-header">
+  <h2>Contacto</h2>
+  <p>Ponte en contacto o envíame un correo electrónico directamente a <a href="mailto:ajperezmarin@gmail.com">
+      ajperezmarin&#64;gmail.com</a></p>
 </div>
 
 <div class="contact-section">
-    <!-- Left Column -->
-    <div class="contact-left">
-      <img src="pngegg.png" alt="Profile Image" class="profile-image">
-      <h2>Antonio Jesús Pérez Marín</h2>
-      <h3>Programador Fullstack</h3>
-      <p>Con experiencia en desarrollo web, tanto front-end como back-end, utilizando tecnologías como Java, Angular, y más.</p>
-      <p><strong>Teléfono:</strong> 627327899</p>
-      <p><strong>Email:</strong> <a href="mailto:ajperezmarin@gmail.com">ajperezmarin&#64;gmail.com</a></p>
-      <p>Encuéntrame en:</p>
-      <button onclick="window.open('https://github.com/tu-usuario', '_blank')" class="social-button">GitHub</button>
-      <button onclick="window.open('https://www.linkedin.com/in/tu-usuario', '_blank')" class="social-button">LinkedIn</button>
-    </div>
-  
-    <!-- Right Column: Contact Form -->
-    <div class="contact-right">
-      <h2>Contacto</h2>
-      <input type="text" placeholder="Nombre" [(ngModel)]="form.name" required>
-      <input type="tel" placeholder="Teléfono" [(ngModel)]="form.phone" required>
-      <input type="email" placeholder="Email" [(ngModel)]="form.email" required>
-      <input type="text" placeholder="Asunto" [(ngModel)]="form.subject" required>
-      <textarea placeholder="Mensaje" [(ngModel)]="form.message" required></textarea>
-      <button (click)="send()">Enviar Mensaje</button>
-    </div>
+  <!-- Left Column -->
+  <div class="contact-left">
+    <img src="pngegg.png" alt="Profile Image" class="profile-image">
+    <h2>Antonio Jesús Pérez Marín</h2>
+    <h3>Programador Fullstack</h3>
+    <p>Con experiencia en desarrollo web, tanto front-end como back-end, utilizando tecnologías como Java, Angular, y
+      más.</p>
+    <p><strong>Teléfono:</strong> 627327899</p>
+    <p><strong>Email:</strong> <a href="mailto:ajperezmarin@gmail.com">ajperezmarin&#64;gmail.com</a></p>
+    <p>Encuéntrame en:</p>
+    <button onclick="window.open('https://github.com/tu-usuario', '_blank')" class="social-button">GitHub</button>
+    <button onclick="window.open('https://www.linkedin.com/in/tu-usuario', '_blank')"
+      class="social-button">LinkedIn</button>
   </div>
-  
+
+  <!-- Right Column: Contact Form -->
+  <div class="contact-right">
+
+    <div class="form_group">
+      <input type="text" id="name" class="form_input" placeholder=" " [(ngModel)]="form.name" required>
+      <label for="name" class="form_label">Nombre:</label>
+      <span class="form_line"></span>
+    </div>
+
+    <div class="form_group">
+      <input type="tel" id="phone" class="form_input" placeholder=" " [(ngModel)]="form.phone" required>
+      <label for="phone" class="form_label">Teléfono:</label>
+      <span class="form_line"></span>
+    </div>
+
+    <div class="form_group">
+      <input type="email" id="email" class="form_input" placeholder=" " [(ngModel)]="form.email" required>
+      <label for="email" class="form_label">Email:</label>
+      <span class="form_line"></span>
+    </div>
+
+    <div class="form_group">
+      <input type="text" id="subject" class="form_input" placeholder=" " [(ngModel)]="form.subject" required>
+      <label for="subject" class="form_label">Asunto:</label>
+      <span class="form_line"></span>
+    </div>
+
+    <div class="form_group">
+      <textarea id="message" class="form_input textarea_input" placeholder=" " [(ngModel)]="form.message" required
+        rows="4" (input)="adjustHeight($event)"></textarea>
+      <label for="message" class="form_label">Mensaje:</label>
+      <span class="form_line_textarea"></span>
+    </div>
+
+    <button class="btn-enviar" (click)="send()">Enviar Mensaje</button>
+  </div>
+</div>

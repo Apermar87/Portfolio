@@ -1,70 +1,178 @@
-.resume-header {
-    padding: 2rem 4% 2rem;
+.contact-header {
+  padding: 2rem 4% 2rem;
 }
 
 @media (min-width: 1920px) {
-    .resume-header {
-        padding: 2rem 12% 2rem;
-    }
+  .contact-header {
+    padding: 2rem 12% 2rem;
+  }
 }
 
-.resume-header p {
-    font-size: 1.2rem;
-    color: #333;
+.contact-header p {
+  font-size: 1.2rem;
+  color: #333;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: normal;
-    font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  font-weight: normal;
+  font-weight: bold;
 }
 
 .contact-section {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* Asegura que las columnas tengan la misma altura */
-  gap: 20px; /* Espaciado entre las columnas */
+  align-items: stretch;
+  gap: 20px;
+  padding: 2rem 4% 2rem;
 }
 
-.contact-left, .contact-right {
-  flex: 1; /* Asegura que ambas columnas tengan el mismo ancho */
+@media (min-width: 1920px) {
+  .contact-section {
+    padding: 2rem 12% 2rem;
+  }
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra el contenido verticalmente */
+  justify-content: start;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  height: 400px; /* Ajusta la altura según tus necesidades para crear el efecto cuadrado */
+  height: auto;
 }
 
 .contact-left {
-  align-items: center; /* Centra el contenido en la columna izquierda */
+  align-items: center;
+}
+
+.contact-right{
+  gap: 2.5em;
 }
 
 .contact-left img {
-  max-width: 100px;
+  max-width: 200px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
 
-.contact-right input, .contact-right textarea, .contact-right button {
-  margin-bottom: 10px;
-  padding: 10px;
+.form_group{
+  position: relative;
+  --color: #5757577e;
+}
+
+.form_input{
   width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.contact-right button {
-  background-color: #007BFF;
-  color: white;
+  background: none;
+  color: #706c6c;
+  font-size: 1rem;
+  padding: .6em .3em;
   border: none;
-  cursor: pointer;
+  outline: none;
+  border-bottom: 1px solid var(--color);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
-.contact-right button:hover {
-  background-color: #0056b3;
+.form_input.textarea_input {
+  resize: none; 
+  height: auto;
+  overflow: hidden; 
 }
+
+.form_input:focus {
+  background-color: #f0f8ff; 
+  border-bottom-color: #119DDD; 
+  transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.form_input:focus,
+.form_input:not(:placeholder-shown){
+  color: red;
+}
+
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown) + .form_label{
+  transform: translateY(-15px) scale(.7);
+  transform-origin: left top;
+  color: #119DDD;
+}
+
+.form_label{
+  color: var(--color);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  transform: translateY(10px);
+  transition: transform .5s, color .3s;
+}
+
+.form_line{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #119DDD;
+  transform: scale(0);
+  transform: left bottom;
+  transition: transform .4s;
+}
+
+.form_line_textarea{
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #119DDD;
+  transform: scale(0);
+  transform: left bottom;
+  transition: transform .4s;
+}
+
+.form_input:focus ~ .form_line,
+.form_input:not(:placeholder-shown) ~ .form_line{
+transform: scale(1);
+}
+
+.form_input:focus ~ .form_line_textarea,
+.form_input:not(:placeholder-shown) ~ .form_line_textarea{
+transform: scale(1);
+}
+
+.btn-enviar {
+  background-color: #119DDD;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 30px;
+  border-radius: 30px;
+  transition: .4s;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.btn-enviar:hover {
+  background-color: transparent;
+  transform: scale(1.10);
+  border: 2px solid #007bff;
+  cursor: pointer;
+  color: #181818;
+}
+
+.btn-enviar:active {
+  background-color: #004080;
+  transform: scale(0.98);
+}
+
