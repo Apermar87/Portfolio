@@ -9,9 +9,11 @@ import { Router } from '@angular/router';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-  constructor(private router: Router) { }
 
-  goToResume() {
-    this.router.navigate(['/resume']);
+  descargarCurriculum(): void {
+    const link = document.createElement('a');
+    link.href = '/Curriculum Antonio J Pérez.pdf';
+    link.download = 'Curriculum Antonio J Pérez.pdf';
+    link.click();
   }
 }

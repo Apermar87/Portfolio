@@ -54,8 +54,7 @@
 }
 
 .content-box:hover {
-    box-shadow: 0 0 25px red;
-    border: 3px solid red;
+    box-shadow: 0 0 25px #333;
 }
 
 .timeline-box {

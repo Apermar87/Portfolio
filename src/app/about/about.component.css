@@ -39,6 +39,7 @@
 .about img {
     max-width: 350px;
     margin-bottom: 20px;
+    border-radius: 30px;
 }
 
 .about-text {
@@ -62,7 +63,7 @@
 }
 
 .about-text span {
-    color: red;
+    color: #ff5080;
 }
 
 .intro-text {
@@ -130,7 +131,7 @@ button {
 
 button:hover {
     background-color: transparent;
-    transform: scale(1.10);
+    transform: scale(1.05);
     border: 2px solid #007bff;
     cursor: pointer;
     color: #181818;

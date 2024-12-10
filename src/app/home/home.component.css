@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('/fondo.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0.7)), url('/programador-1869619.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,6 +12,23 @@
 
 .contenedor_texto {
     text-align: center;
+}
+
+.bienvenidos{
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: white;
+}
+
+span{
+    font-size: 25px;
+    color: #ff5080;
+}
+
+h1{
+    color: white;
 }
 
 .subtitulo {
@@ -30,8 +47,9 @@ word-break: break-word;
 .contenedor_texto_animacion {
     display: flex;
     margin-left: 15px;
-    color: red;
-    font-size: 40px;
+    margin-top: 12px;
+    color: #ff5080;
+    font-size: 25px;
     line-height: 1.6;
     font-weight: bold;
 }
@@ -39,8 +57,8 @@ word-break: break-word;
 .barra_escritura {
     width: 3px;
     height: 50px;
-    margin-left: 5px;
-    background-color: #119DDD;
+    margin-left: 10px;
+    background-color: white;
     transform: rotateZ(10deg);
     animation: barra-animacion 1s ease infinite;
 }
@@ -49,15 +67,15 @@ p {
     margin: 30px auto;
     max-width: 1200px;
     text-align: center;
-    color: #333;
+    color: white;
     font-size: 1.2rem;
 }
 
 .btn-ir-about {
-    background-color: #119DDD;
+    background-color: transparent;
     color: white;
     text-decoration: none;
-    border: 2px solid transparent;
+    border: 2px solid white;
     font-weight: bold;
     padding: 13px 30px;
     border-radius: 30px;
@@ -67,11 +85,10 @@ p {
 }
 
 .btn-ir-about:hover {
-    background-color: transparent;
-    transform: scale(1.10);
-    border: 2px solid #007bff;
+    background-color: #ff5080;
+    transform: scale(1.05);
+    border: 2px solid;
     cursor: pointer;
-    color: #181818;
 }
 
 .btn-ir-about:active {
