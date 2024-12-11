@@ -136,6 +136,10 @@ button:hover {
     cursor: pointer;
     color: #181818;
 }
+button:active {
+    background-color: #004080;
+    transform: scale(0.98);
+  }
 
 /* Media Queries para mayor responsividad */
 @media (max-width: 768px) {
