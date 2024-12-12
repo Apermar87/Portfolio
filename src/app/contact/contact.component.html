@@ -1,11 +1,12 @@
-<div class="container">
+<div class="contact">
   <div class="contact-header">
     <h2>Contacto</h2>
-    <p>No dude en ponerse en contacto conmigo enviando el siguiente formulario y me comunicaré con usted lo antes posible.</p>
+    <p>No dude en ponerse en contacto conmigo enviando el siguiente formulario y me comunicaré con usted lo antes
+      posible.</p>
   </div>
 
   <div class="contact-section">
-    <!-- Left Column -->
+    <!-- ************ Columna izquierda *************** -->
     <div class="contact-left">
       <img src="pngegg.png" alt="Profile Image" class="profile-image">
       <div class="contact-items">
@@ -22,7 +23,7 @@
             <p><strong>Ubicación</strong></p>
             <p>Córdoba, España</p>
           </div>
-        </div>        
+        </div>
         <div class="contact-item">
           <i class="fas fa-envelope contact-icon"></i>
           <div class="contact-details">
@@ -34,36 +35,40 @@
     </div>
 
 
-    <!-- Right Column: Contact Form -->
+    <!-- ************ Columna derecha *************** -->
     <div class="contact-right">
 
       <div class="form_group">
-        <input type="text" id="name" class="form_input" placeholder=" " [(ngModel)]="form.name" required>
+        <input type="text" id="name" class="form_input" placeholder=" " [(ngModel)]="form.name" required
+          autocomplete="off">
         <label for="name" class="form_label">Nombre:</label>
         <span class="form_line"></span>
       </div>
 
       <div class="form_group">
-        <input type="tel" id="phone" class="form_input" placeholder=" " [(ngModel)]="form.phone" required>
+        <input type="tel" id="phone" class="form_input" placeholder=" " [(ngModel)]="form.phone" required
+          autocomplete="off">
         <label for="phone" class="form_label">Teléfono:</label>
         <span class="form_line"></span>
       </div>
 
       <div class="form_group">
-        <input type="email" id="email" class="form_input" placeholder=" " [(ngModel)]="form.email" required>
+        <input type="email" id="email" class="form_input" placeholder=" " [(ngModel)]="form.email" required
+          autocomplete="off">
         <label for="email" class="form_label">Email:</label>
         <span class="form_line"></span>
       </div>
 
       <div class="form_group">
-        <input type="text" id="subject" class="form_input" placeholder=" " [(ngModel)]="form.subject" required>
+        <input type="text" id="subject" class="form_input" placeholder=" " [(ngModel)]="form.subject" required
+          autocomplete="off">
         <label for="subject" class="form_label">Asunto:</label>
         <span class="form_line"></span>
       </div>
 
       <div class="form_group">
         <textarea id="message" class="form_input textarea_input" placeholder=" " [(ngModel)]="form.message" required
-          rows="4" (input)="adjustHeight($event)"></textarea>
+          rows="4" (input)="adjustHeight($event)" autocomplete="off"></textarea>
         <label for="message" class="form_label">Mensaje:</label>
         <span class="form_line_textarea"></span>
       </div>

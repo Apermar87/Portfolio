@@ -1,11 +1,15 @@
-.resume-header {
+.resume{
     padding: 2rem 4% 2rem;
 }
 
 @media (min-width: 1920px) {
-    .resume-header {
+    .resume {
         padding: 2rem 12% 2rem;
     }
+}
+
+.resume-header{
+    margin-bottom: 50px;
 }
 
 .resume-header p {
@@ -14,17 +18,9 @@
 }
 
 .timeline-wrapper {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 4% 2rem;
-}
-
-@media (min-width: 1920px) {
-    .timeline-wrapper {
-        padding: 2rem 12% 2rem;
-    }
 }
 
 .timeline-row {
@@ -103,5 +99,11 @@ h3::after {
 @keyframes show-right {
     100% {
         width: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .heading {
+        margin-top: 30px;
     }
 }

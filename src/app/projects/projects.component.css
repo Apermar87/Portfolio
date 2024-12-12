@@ -1,0 +1,9 @@
+.projects{
+    padding: 2rem 4% 2rem;
+}
+
+@media (min-width: 1920px) {
+    .projects {
+        padding: 2rem 12% 2rem;
+    }
+}

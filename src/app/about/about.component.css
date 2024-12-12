@@ -1,5 +1,6 @@
 .about {
     padding: 2rem 4% 2rem;
+    flex-wrap: wrap;
 }
 
 @media (min-width: 1920px) {
@@ -8,51 +9,33 @@
     }
 }
 
-.main {
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-    flex-wrap: wrap;
-    max-width: 100%;
-    /* Asegura que no se desborde horizontalmente */
-}
-
 .about-info {
-    width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .about-info p {
     color: #333;
     font-size: 1.2rem;
-    margin-bottom: 30px;
     line-height: 1.6;
 }
 
 .about-column {
     display: flex;
-    width: 100%;
     gap: 20px;
 }
 
 .about img {
     max-width: 350px;
-    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
     border-radius: 30px;
 }
 
 .about-text {
-    flex-direction: column;
     align-items: center;
     text-align: center;
     padding-top: 10px;
-}
-
-.about-text a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: normal;
+    margin-left: 20px;
 }
 
 .about-text h5 {
@@ -66,10 +49,9 @@
     color: #ff5080;
 }
 
-.intro-text {
+.about-text p {
     color: #333;
     font-size: 1.2rem;
-    margin-left: 20px;
     text-align: start;
 }
 
@@ -77,7 +59,7 @@
     display: flex;
     justify-content: center;
     gap: 100px;
-    margin: 25px 20px;
+    margin: 25px 0;
     text-align: left;
 }
 
@@ -108,9 +90,14 @@
     font-size: 1.2rem;
 }
 
+.column a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+}
+
 .additional-info {
     margin-bottom: 50px;
-    margin-left: 20px;
     text-align: start;
     color: #333;
     font-size: 1.2rem;
@@ -141,9 +128,8 @@ button:active {
     transform: scale(0.98);
   }
 
-/* Media Queries para mayor responsividad */
 @media (max-width: 768px) {
-    .main {
+    .about {
         flex-direction: column;
         /* Apilar elementos en pantallas pequeñas */
         align-items: center;
@@ -183,7 +169,7 @@ button:active {
     }
 
     .additional-info,
-    .intro-text {
+    .about-text p {
         margin-left: 0;
         /* Ajustar márgenes */
         text-align: center;
@@ -193,7 +179,7 @@ button:active {
 
 /* Media Query para tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
-    .main {
+    .about {
         flex-direction: column;
         /* Apilar elementos en pantallas pequeñas */
         align-items: center;
@@ -233,7 +219,7 @@ button:active {
     }
 
     .additional-info,
-    .intro-text {
+    .about-text p {
         margin-left: 0;
         /* Ajustar márgenes */
         text-align: center;
