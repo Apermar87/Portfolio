@@ -1,8 +1,10 @@
 <div class="contact">
   <div class="contact-header">
     <h2>Contacto</h2>
-    <p>No dude en ponerse en contacto conmigo enviando el siguiente formulario y me comunicaré con usted lo antes
-      posible.</p>
+    <p>No dude en ponerse en contacto conmigo enviando el siguiente <strong>formulario, </strong> y me comunicaré con
+      usted lo antes posible.
+      También puede ponerse en contacto llamando al <strong>teléfono</strong> o enviándome directamente un
+      <strong>correo electrónico.</strong></p>
   </div>
 
   <div class="contact-section">
@@ -36,44 +38,55 @@
 
 
     <!-- ************ Columna derecha *************** -->
-    <div class="contact-right">
 
+    <form class="contact-right" (submit)="send()" novalidate>
       <div class="form_group">
-        <input type="text" id="name" class="form_input" placeholder=" " [(ngModel)]="form.name" required
-          autocomplete="off">
+        <input type="text" id="name" class="form_input" placeholder=" " [(ngModel)]="form.name" name="name"
+          autocomplete="off" required />
         <label for="name" class="form_label">Nombre:</label>
         <span class="form_line"></span>
+        <small *ngIf="errors.name" class="error">{{ errors.name }}</small>
       </div>
 
       <div class="form_group">
-        <input type="tel" id="phone" class="form_input" placeholder=" " [(ngModel)]="form.phone" required
-          autocomplete="off">
+        <input type="tel" id="phone" class="form_input" placeholder=" " [(ngModel)]="form.phone" name="phone"
+          autocomplete="off" pattern="^[0-9]{9,15}$" required />
         <label for="phone" class="form_label">Teléfono:</label>
         <span class="form_line"></span>
+        <small *ngIf="errors.phone" class="error">{{ errors.phone }}</small>
       </div>
 
       <div class="form_group">
-        <input type="email" id="email" class="form_input" placeholder=" " [(ngModel)]="form.email" required
-          autocomplete="off">
+        <input type="email" id="email" class="form_input" placeholder=" " [(ngModel)]="form.email" name="email"
+          autocomplete="off" required />
         <label for="email" class="form_label">Email:</label>
         <span class="form_line"></span>
+        <small *ngIf="errors.email" class="error">{{ errors.email }}</small>
       </div>
 
       <div class="form_group">
-        <input type="text" id="subject" class="form_input" placeholder=" " [(ngModel)]="form.subject" required
-          autocomplete="off">
+        <input type="text" id="subject" class="form_input" placeholder=" " [(ngModel)]="form.subject" name="subject"
+          autocomplete="off" required />
         <label for="subject" class="form_label">Asunto:</label>
         <span class="form_line"></span>
+        <small *ngIf="errors.subject" class="error">{{ errors.subject }}</small>
       </div>
 
       <div class="form_group">
-        <textarea id="message" class="form_input textarea_input" placeholder=" " [(ngModel)]="form.message" required
-          rows="4" (input)="adjustHeight($event)" autocomplete="off"></textarea>
+        <textarea id="message" class="form_input textarea_input" placeholder=" " [(ngModel)]="form.message"
+          autocomplete="off" name="message" required></textarea>
         <label for="message" class="form_label">Mensaje:</label>
         <span class="form_line_textarea"></span>
+        <small *ngIf="errors.message" class="error">{{ errors.message }}</small>
       </div>
 
-      <button class="btn-enviar" (click)="send()">Enviar Mensaje</button>
-    </div>
-  </div>
+      <button class="btn-enviar" (click)="send()">
+        Enviar Mensaje
+      </button>
+      <div *ngIf="messageSent" class="success-message">
+        <p>Mensaje enviado con éxito.</p>
+      </div>
+    </form>
+
+</div>
 </div>

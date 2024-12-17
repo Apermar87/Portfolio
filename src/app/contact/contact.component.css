@@ -181,6 +181,13 @@ transform: scale(1);
 transform: scale(1);
 }
 
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+
 .btn-enviar {
   background-color: #119DDD;
   color: white;
@@ -208,6 +215,14 @@ transform: scale(1);
   background-color: #004080;
   transform: scale(0.98);
 }
+
+.success-message {
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
 
 @media (min-width: 768px) {
   .btn-enviar {

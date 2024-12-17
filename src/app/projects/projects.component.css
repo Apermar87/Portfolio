@@ -9,6 +9,11 @@
     }
 }
 
+.projects p{
+    color: #333;
+    font-size: 1.2rem;
+}
+
 .projects .row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -20,13 +25,30 @@
     border: 1px solid #000;
     position: relative;
     overflow: hidden;
+    view-timeline-name: --reveal;
+    animation-name: show;
+    animation-fill-mode: both;
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 10%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
 }
 
 .projects .row .proyect img {
     width: 100%;
     height: 100%;
     filter: grayscale(1);
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.5s ease, filter 0.5s ease;
 }
 
@@ -62,6 +84,15 @@
         grid-template-columns: 1fr; 
         gap: 15px; 
     }
+    .projects .row .proyect img {
+        filter: grayscale(0);
+        transform: none;
+      }
+    
+      .projects .row .proyect .info {
+        opacity: 1;
+        bottom: 0;
+      }
 
     .projects .row .proyect .info p {
         font-size: 1rem; 
