@@ -9,7 +9,6 @@
 }
 
 .main-title p {
-    font-size: 1.2rem;
     color: #333;
 }
 
@@ -24,7 +23,7 @@
 }
 
 .subject {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: thin;
     color: #808080;
     padding-bottom: 5px;
@@ -46,7 +45,7 @@
     top: -35px;
     right: 0;
     color: #808080;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .progress-line {
@@ -100,7 +99,7 @@
     gap: 15px;
     margin: 0px auto;
     max-width: 1800px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 
 .card {
@@ -137,7 +136,7 @@
 }
 
 .card i {
-    font-size: 50px;
+    font-size: 35px;
     display: block;
     text-align: center;
     margin: 25px 0px;
@@ -150,45 +149,45 @@
 
 .pra p {
     color: #A8A9B4;
-    font-size: 1.2rem;
     margin-bottom: 25px;
 }
 
-@media(max-width: 568px) {
+/* Ajustes para móviles (pantallas máximo 768px) */
+@media (max-width: 768px) {
     .container-skills .row {
+        margin-top: 30px;
         flex-direction: column;
     }
 
-    .container-skills .row {
-        margin-top: 30px;
+    .subject {
+        font-size: 1rem;
+    }
+
+    .progress-bar::after {
+        font-size: 1rem;
+    }
+
+    .card {
+        margin: 0 auto;
     }
 
     .row .col:nth-child(2) {
         margin-top: 20px;
     }
-
-    .box {
-        flex-direction: column;
-    }
-
-    .card {
-        width: 90%;
-    }
 }
 
-@media (max-width: 768px) {
-    .box {
-        flex-direction: column;
-        align-items: center;
+/* Ajustes para tablets (pantallas entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .row .col {
+        margin-bottom: 30px;
     }
 
-    .card {
-        width: 80%;
-        margin: 15px auto;
+    .subject {
+        font-size: 1.1rem;
     }
 
-    .container-skills {
-        padding: 30px 8%;
+    .progress-bar::after {
+        font-size: 1.1rem;
     }
 
 }

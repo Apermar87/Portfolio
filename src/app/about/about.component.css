@@ -15,7 +15,6 @@
 
 .about-info p {
     color: #333;
-    font-size: 1.2rem;
     line-height: 1.6;
 }
 
@@ -41,7 +40,6 @@
 .about-text h5 {
     color: #242223;
     letter-spacing: 2px;
-    font-size: 22px;
     margin-bottom: 20px;
 }
 
@@ -51,7 +49,6 @@
 
 .about-text p {
     color: #333;
-    font-size: 1.2rem;
     text-align: start;
 }
 
@@ -71,7 +68,6 @@
 
 .column p {
     color: #333;
-    font-size: 1.2rem;
     margin: 5px 0;
     position: relative;
     padding-left: 20px;
@@ -87,7 +83,6 @@
 
 .column p strong {
     color: #333;
-    font-size: 1.2rem;
 }
 
 .column a {
@@ -100,7 +95,6 @@
     margin-bottom: 50px;
     text-align: start;
     color: #333;
-    font-size: 1.2rem;
 }
 
 button {
@@ -113,7 +107,7 @@ button {
     border-radius: 30px;
     transition: .4s;
     line-height: 1.6;
-    font-size: 18px;
+    font-size: 1.1rem;
 }
 
 button:hover {
@@ -123,106 +117,94 @@ button:hover {
     cursor: pointer;
     color: #181818;
 }
+
 button:active {
     background-color: #004080;
     transform: scale(0.98);
-  }
+}
 
+/* Ajustes para móviles (pantallas máximo 768px) */
 @media (max-width: 768px) {
     .about {
         flex-direction: column;
-        /* Apilar elementos en pantallas pequeñas */
-        align-items: center;
-        /* Centrar contenido */
     }
 
     .about img {
         width: 339px;
-        /* Establecer ancho específico para la imagen */
         height: 339px;
-        /* Establecer alto específico para la imagen */
         margin-bottom: 20px;
-        /* Margen inferior para espacio con el contenido */
     }
 
     .details {
         flex-direction: column;
-        /* Cambiar dirección de las columnas */
         gap: 20px;
-        /* Espacio entre columnas */
         align-items: center;
-        /* Centrar columnas */
         margin-left: 0;
-        /* Ajustar margen */
     }
 
     .about-column {
         flex-direction: column;
-        /* Asegura que los elementos se apilen en pantallas pequeñas */
-        align-items: center;
-        /* Centrar el contenido */
     }
 
     .column {
         width: 100%;
-        /* Asegurar que las columnas ocupen el 100% en pantallas pequeñas */
+        align-items: center;
     }
 
-    .additional-info,
-    .about-text p {
+    .column p::before {
+        content: '> ';
+        position: relative;
+    }
+
+    .about-text{
         margin-left: 0;
-        /* Ajustar márgenes */
-        text-align: center;
-        /* Centrar texto */
+    }
+
+    button {
+        font-size: 1rem;
     }
 }
 
-/* Media Query para tablets */
+/* Ajustes para tablets (pantallas entre 768px y 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .about {
         flex-direction: column;
-        /* Apilar elementos en pantallas pequeñas */
         align-items: center;
-        /* Centrar contenido */
     }
 
     .about img {
         width: 550px;
-        /* Establecer ancho específico para la imagen */
         height: 550px;
-        /* Establecer alto específico para la imagen */
         margin-bottom: 20px;
-        /* Margen inferior para espacio con el contenido */
     }
 
     .details {
         flex-direction: column;
-        /* Cambiar dirección de las columnas */
         gap: 20px;
-        /* Espacio entre columnas */
         align-items: center;
-        /* Centrar columnas */
         margin-left: 0;
-        /* Ajustar margen */
     }
 
     .about-column {
         flex-direction: column;
-        /* Asegura que los elementos se apilen en pantallas pequeñas */
         align-items: center;
-        /* Centrar el contenido */
     }
 
     .column {
         width: 100%;
-        /* Asegurar que las columnas ocupen el 100% en pantallas pequeñas */
+        align-items: center;
     }
 
-    .additional-info,
-    .about-text p {
+    .column p::before {
+        content: '> ';
+        position: relative;
+    }
+
+    .about-text{
         margin-left: 0;
-        /* Ajustar márgenes */
-        text-align: center;
-        /* Centrar texto */
+    }
+
+    button {
+        font-size: 1.1rem;
     }
 }

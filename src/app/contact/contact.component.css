@@ -1,4 +1,4 @@
-.contact{
+.contact {
   background-color: #F4FAFD;
   min-height: 100vh;
   padding: 2rem 4% 2rem;
@@ -11,11 +11,10 @@
 }
 
 .contact-header {
-margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .contact-header p {
-  font-size: 1.2rem;
   color: #333;
 }
 
@@ -52,13 +51,12 @@ margin-bottom: 50px;
 
 .contact-items {
   display: flex;
-  flex-direction: column; 
-  align-items: flex-start; 
-  text-align: left;       
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
   width: 100%;
   margin-left: 50px;
   line-height: 1.6;
-  font-size: 18px;
 }
 
 .contact-item {
@@ -69,7 +67,7 @@ margin-bottom: 50px;
 }
 
 .contact-icon {
-  font-size: 24px;
+  font-size: 20px;
   color: #119DDD;
   margin-right: 20px;
 }
@@ -95,20 +93,20 @@ margin-bottom: 50px;
   text-decoration: underline;
 }
 
-.contact-right{
+.contact-right {
   gap: 2.5em;
 }
 
-.form_group{
+.form_group {
   position: relative;
   --color: #5757577e;
 }
 
-.form_input{
+.form_input {
   width: 100%;
   background: none;
   color: #706c6c;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: .6em .3em;
   border: none;
   outline: none;
@@ -118,26 +116,26 @@ margin-bottom: 50px;
 }
 
 .form_input.textarea_input {
-  resize: none; 
+  resize: none;
   height: auto;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .form_input:focus {
-  background-color: #f0f8ff; 
-  border-bottom-color: #119DDD; 
+  background-color: #f0f8ff;
+  border-bottom-color: #119DDD;
   transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
   border-radius: 5px;
 }
 
-.form_input:focus + .form_label,
-.form_input:not(:placeholder-shown) + .form_label{
+.form_input:focus+.form_label,
+.form_input:not(:placeholder-shown)+.form_label {
   transform: translateY(-15px) scale(.7);
   transform-origin: left top;
   color: #119DDD;
 }
 
-.form_label{
+.form_label {
   color: var(--color);
   cursor: pointer;
   position: absolute;
@@ -147,7 +145,7 @@ margin-bottom: 50px;
   transition: transform .5s, color .3s;
 }
 
-.form_line{
+.form_line {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -159,7 +157,7 @@ margin-bottom: 50px;
   transition: transform .4s;
 }
 
-.form_line_textarea{
+.form_line_textarea {
   position: absolute;
   bottom: 8px;
   left: 0;
@@ -171,14 +169,14 @@ margin-bottom: 50px;
   transition: transform .4s;
 }
 
-.form_input:focus ~ .form_line,
-.form_input:not(:placeholder-shown) ~ .form_line{
-transform: scale(1);
+.form_input:focus~.form_line,
+.form_input:not(:placeholder-shown)~.form_line {
+  transform: scale(1);
 }
 
-.form_input:focus ~ .form_line_textarea,
-.form_input:not(:placeholder-shown) ~ .form_line_textarea{
-transform: scale(1);
+.form_input:focus~.form_line_textarea,
+.form_input:not(:placeholder-shown)~.form_line_textarea {
+  transform: scale(1);
 }
 
 .error {
@@ -198,7 +196,7 @@ transform: scale(1);
   border-radius: 30px;
   transition: .4s;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 1.1rem;
   align-items: center;
   margin: 0 auto;
 }
@@ -223,27 +221,95 @@ transform: scale(1);
   text-align: center;
 }
 
-
-@media (min-width: 768px) {
-  .btn-enviar {
-    width: auto; 
-  }
-}
-
-/* Media Queries */
+/* Ajustes para móviles (pantallas máximo 768px) */
 @media (max-width: 768px) {
   .contact-section {
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   .contact-left,
   .contact-right {
     width: 100%;
     padding: 15px;
+
+  }
+
+  .profile-image {
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+
+  .contact-items {
+    margin-left: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-icon {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .contact-details p {
+    text-align: center;
+  }
+
+  .form_group {
+    margin-bottom: 20px;
+  }
+
+  .btn-enviar {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+/* Ajustes para tablets (pantallas entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 90%;
+    padding: 20px;
   }
 
   .profile-image {
     max-width: 200px;
   }
-}
 
+  .contact-items {
+    margin-left: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-icon {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .contact-details p {
+    text-align: center;
+  }
+
+  .btn-enviar {
+    width: auto;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+  }
+}

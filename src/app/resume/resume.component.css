@@ -13,7 +13,6 @@
 }
 
 .resume-header p {
-    font-size: 1.2rem;
     color: #333;
 }
 
@@ -28,8 +27,12 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.i {
-    font-size: 1rem;
+.timeline-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-left: 3px solid #119DDD;
 }
 
 .content-box {
@@ -43,7 +46,6 @@
     backdrop-filter: blur(20px);
     border: 3px solid #119DDD;
     border-radius: 1rem;
-    font-size: 1.1rem;
     color: #333;
     transition: 0.4s ease;
     cursor: pointer;
@@ -51,19 +53,6 @@
 
 .content-box:hover {
     box-shadow: 0 0 25px #333;
-}
-
-.timeline-box {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    border-left: 3px solid #119DDD;
-}
-
-.date {
-    font-size: 1.2rem;
-    font-weight: bold;
 }
 
 .content-box::before {
@@ -75,6 +64,15 @@
     border-radius: 50%;
     left: -50px;
     top: 90px;
+}
+
+.date {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+h4{
+    font-size: 1.3rem;
 }
 
 .animate {
@@ -102,8 +100,26 @@ h3::after {
     }
 }
 
-@media (max-width: 900px) {
+/* Ajustes para móviles (pantallas máximo 768px) */
+@media (max-width: 768px) {
+    .resume-header{
+        margin-bottom: 20px;
+    }
+    .date {
+        font-size: 1rem;
+    }
     .heading {
         margin-top: 30px;
     }
 }
+
+/* Ajustes para tablets (pantallas entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .resume-header{
+        margin-bottom: 20px;
+    }
+    .date {
+        font-size: 1.1rem;
+    }
+}
+

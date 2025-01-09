@@ -15,7 +15,7 @@
 }
 
 .bienvenidos{
-    font-size: 16px;
+    font-size: 1.4rem;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -23,7 +23,7 @@
 }
 
 span{
-    font-size: 25px;
+    font-size: 1.6rem;
     color: #ff5080;
 }
 
@@ -49,7 +49,7 @@ word-break: break-word;
     margin-left: 15px;
     margin-top: 12px;
     color: #ff5080;
-    font-size: 25px;
+    font-size: 1.6rem;
     line-height: 1.6;
     font-weight: bold;
 }
@@ -68,7 +68,6 @@ p {
     max-width: 1200px;
     text-align: center;
     color: white;
-    font-size: 1.2rem;
 }
 
 .btn-ir-about {
@@ -81,7 +80,7 @@ p {
     border-radius: 30px;
     transition: .4s;
     line-height: 1.6;
-    font-size: 18px;
+    font-size: 1.1rem;
 }
 
 .btn-ir-about:hover {
@@ -110,42 +109,80 @@ p {
     display: block; 
 }
 
-@media (max-width: 768px) {
+/* Ajustes para móviles (pantallas máximo 767px) */
+@media (max-width: 767px) {
     .contenedor {
-        padding: 2rem 5%;
+        padding: 1.5rem 5%;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .contenedor_texto {
         text-align: center;
+        margin-top: 2rem;
     }
 
-    .imagen-bajo-boton {
-        max-width: 50%; 
+    .bienvenidos {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        letter-spacing: 3px; 
+    }
+
+    span {
+        font-size: 1.2rem;
+    }
+
+    .contenedor_texto_animacion {
+        font-size: 1.2rem; 
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    p {
+        margin: 20px auto;
     }
 
     .btn-ir-about {
-        font-size: 16px; 
+        font-size: 1rem; 
         padding: 10px 25px; 
     }
 }
 
-@media (max-width: 480px) {
+/* Ajustes para tablets (pantallas entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
     .contenedor {
+        padding: 2rem 8%;
         flex-direction: column;
-        justify-content: flex-start;
-        height: auto;
     }
 
     .contenedor_texto {
         margin-top: 2rem;
+        text-align: center;
     }
 
-    .imagen-bajo-boton {
-        max-width: 80%; 
+    .bienvenidos {
+        font-size: 1.1rem;
+        margin-bottom: 18px;
+    }
+
+    span {
+        font-size: 1.3rem;
+    }
+
+    .contenedor_texto_animacion {
+        font-size: 1.3rem;
+    }
+
+    p {
+        margin: 25px auto;
     }
 
     .btn-ir-about {
-        font-size: 14px; 
-        padding: 8px 20px; 
+        font-size: 1.1rem;
+        padding: 10px 25px;
+    }
+
+    .imagen-bajo-boton {
+        max-width: 60%; 
     }
 }

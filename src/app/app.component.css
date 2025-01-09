@@ -3,7 +3,6 @@
   flex-direction: row;
 }
 
-/* Barra lateral fija */
 .sidebar {
   position: fixed;
   top: 0;
@@ -16,7 +15,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Centra verticalmente los elementos */
 }
 
 .sidebar .profile-picture img {
@@ -31,9 +29,7 @@
   margin-top: 25px;
   display: flex;
   justify-content: center;
-  /* Centra los iconos horizontalmente */
   gap: 25px;
-  /* Espacio entre los iconos */
 }
 
 .sidebar .social-links a {
@@ -47,7 +43,6 @@
   color: #A8A9B4;
 }
 
-/* Opción para cambiar el tamaño al pasar el ratón (hover) */
 .sidebar .social-links a:hover i {
   color: #0077b5;
   transform: scale(1.40);
@@ -55,9 +50,7 @@
 
 .sidebar .social-links a:active i {
   background-color: #004080;
-  /* Color más oscuro cuando se presiona */
   transform: scale(0.98);
-  /* Reduce ligeramente el tamaño al presionar */
 }
 
 .menu-icon {
@@ -87,20 +80,21 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  height: 100%;
 }
 
 .nav-links li {
-  margin: 20px;
+  margin: 0;
 }
 
 .nav-links li a {
   color: #A8A9B4;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  text-align: center;
 }
 
-/* Estilo para el enlace activo */
 .nav-links li a.active {
   color: #0077b5;
   font-weight: bold;
@@ -110,7 +104,6 @@
   color: white;
 }
 
-/* Contenido principal */
 .content {
   margin-left: 250px;
   flex-grow: 1;
@@ -121,12 +114,7 @@ section {
   padding: 20px;
 }
 
-section h1 {
-  margin-top: 0;
-  font-size: 2rem;
-}
-
-/* Para móviles */
+/* Ajustes para móviles (pantallas máximo 768px) */
 @media only screen and (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -170,13 +158,18 @@ section h1 {
     padding: 10px 20px;
   }
 
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+
   #menu-toggle:checked+.menu-icon+.nav-links {
     height: auto;
     max-height: 100vh;
   }
 
   #menu-toggle:checked ~ #main-content {
-    margin-top: 200px; /* Ajusta este valor según la altura de tu menú desplegable */
+    margin-top: 200px;
     transition: margin-top 0.5s ease;
   }
 
@@ -196,18 +189,36 @@ section h1 {
   #menu-toggle:checked+.menu-icon .line:nth-child(3) {
     transform: rotate(-45deg) translate(15px, -3px);
   }
-
 }
 
-/* Para tablets */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+/* Ajustes para tablets (pantallas entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    flex-direction: row;
+  }
+
   .sidebar {
-    width: 200px;
-    /* Ajusta el ancho de la barra lateral para tablets */
+    width: 200px; 
+    position: fixed;
+    height: 100vh;
+  }
+
+  .menu-icon {
+    display: none; 
+  }
+
+  .nav-links {
+    position: static; 
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links li a {
+    font-size: 1.1rem;
   }
 
   .content {
-    margin-left: 200px;
-    /* Ajusta el margen en tablets */
+    margin-left: 200px; 
   }
 }

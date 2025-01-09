@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     if (isPlatformBrowser(this.platformId)) {
       this.router.events.subscribe(event => {
         if (event instanceof NavigationEnd) {
-          window.scrollTo(0, 0); // Asegúrate de que esto solo se ejecute en el navegador
+          window.scrollTo(0, 0); 
         }
       });
     }
@@ -28,7 +28,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
-      // Todo el código relacionado con 'document' debe ir aquí
 
       const menuToggle = document.getElementById('menu-toggle') as HTMLInputElement;
       const mainContent = document.getElementById('main-content') as HTMLElement;
@@ -36,7 +35,7 @@ export class AppComponent implements OnInit {
       if (menuToggle && mainContent) {
         menuToggle.addEventListener('change', () => {
           if (menuToggle.checked) {
-            mainContent.style.marginTop = '400px'; // Ajusta el valor según la altura de tu menú desplegable
+            mainContent.style.marginTop = '380px'; 
           } else {
             mainContent.style.marginTop = '0';
           }

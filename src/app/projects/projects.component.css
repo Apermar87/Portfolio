@@ -11,14 +11,13 @@
 
 .projects p{
     color: #333;
-    font-size: 1.2rem;
 }
 
 .projects .row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    margin: 30px 0;
+    margin: 50px 0;
 }
 
 .projects .row .proyect {
@@ -70,7 +69,6 @@
 
 .projects .row .proyect .info p {
     color: #119DDD;
-    font-size: 1.2rem;
 }
 
 .projects .row .proyect:hover .info {
@@ -78,8 +76,12 @@
     bottom: 0;
 }
 
-
+/* Ajustes para móviles (pantallas máximo 768px) */
 @media (max-width: 768px) {
+    .projects {
+        padding-bottom: 200px;
+    }
+    
     .projects .row {
         grid-template-columns: 1fr; 
         gap: 15px; 
@@ -93,12 +95,9 @@
         opacity: 1;
         bottom: 0;
       }
-
-    .projects .row .proyect .info p {
-        font-size: 1rem; 
-    }
 }
 
+/* Ajustes para tablets (pantallas entre 768px y 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .projects .row {
         grid-template-columns: repeat(2, 1fr);

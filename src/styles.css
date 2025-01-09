@@ -16,14 +16,14 @@ body {
 h1 {
   margin: 0px;
   color: #242223;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 1.6;
 }
 
 h2 {
   position: relative;
   color: #242223;
-  font-size: 30px;
+  font-size: 1.8rem;
   display: inline-block;
   margin-bottom: 30px;
 }
@@ -40,7 +40,7 @@ h2::before {
 h3 {
   position: relative;
   color: #242223;
-  font-size: 22px;
+  font-size: 1.6rem;
   display: inline-block;
   margin-bottom: 30px;
 }
@@ -66,13 +66,61 @@ h3::after {
 }
 
 h4{
-    font-size: 18px;
+    font-size: 1.5rem;
     color: #808080;
     text-transform: uppercase;
 }
 
 h5 {
     color: white;
-    font-size: 23px;
+    font-size: 1.4rem;
     margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+/* Ajustes para móviles (pantallas máximo 767px) */
+@media (max-width: 767px) {
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.4rem;
+}
+h3 {
+  font-size: 1.3rem;
+}
+h4{
+  font-size: 1.2rem;
+}
+h5 {
+  font-size: 1.1rem;
+}
+p {
+  font-size: 1rem;
+}
+}
+
+/* Ajustes para tablets (pantallas entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4{
+    font-size: 1.4rem;
+  }
+  h5 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
 }
