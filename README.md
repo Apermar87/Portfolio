@@ -1,27 +1,60 @@
-# Portafolio
+# Portafolio Personal - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
+Puedes ver mi portafolio en vivo en el siguiente enlace: [https://portfolio.antonioperez.eu/](https://portfolio.antonioperez.eu/)
 
-## Development server
+Mi portafolio está desarrollado con **Angular** y desplegado en un servidor mediante **Docker** y **Cloudflare**. Es un sitio web estático que muestra información sobre mí, mis habilidades, mi experiencia y mis proyectos. El portafolio es **totalmente responsive**, lo que significa que se adapta perfectamente a diferentes dispositivos, como móviles, tabletas y ordenadores.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 🛠️ Tecnologías Utilizadas
+- **Angular**: Framework de desarrollo frontend.
+- **Docker**: Contenerización y despliegue del portafolio.
+- **Cloudflare**: Gestión del dominio y seguridad del sitio.
+- **EmailJS**: Servicio para envío de correos electrónicos en la sección de contacto.
+- **HTML, CSS y JavaScript**: Para la estructura y el diseño responsivo.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 📌 Secciones del Portafolio
+1. **Inicio**: Presentación con efecto de texto animado.
+2. **Sobre mí**: Información personal y descarga de CV en PDF.
+3. **Currículum**: Experiencia académica y profesional.
+4. **Habilidades**: Tecnologías y herramientas con las que trabajo.
+5. **Proyectos**: Muestra de mis trabajos destacados.
+6. **Contacto**: Formulario de contacto con integración de EmailJS.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## 🔗 Barra de navegación
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+En todas las secciones de mi portafolio, hay una **barra de navegación** visible que permite cambiar entre las diferentes secciones del sitio. La barra de navegación está ubicada en el lado izquierdo de la pantalla y es **fija** para facilitar la navegación. Además, contiene los siguientes enlaces:
 
-## Running end-to-end tests
+- **GitHub**: [https://github.com/Apermar87](https://github.com/Apermar87)
+- **LinkedIn**: [https://www.linkedin.com/in/ajperezmarin/](https://www.linkedin.com/in/ajperezmarin/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+La barra de navegación se despliega también en dispositivos móviles, adaptándose a un formato **"hamburguesa"**.
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📂 Estructura del Proyecto
+- **src/**: Código fuente
+- **src/app/components/**: Componentes de Angular
+- **src/app/services/**: Servicios de la aplicación
+- **src/app/assets/**: Imágenes y recursos
+- **dist**: Archivos compilados para producción
+- **Dockerfile**: Configuración del contenedor Docker
+- **nginx.conf**: Configuración del servidor Nginx
+- **package.json**: Dependencias y scripts del proyecto.
+- **server.ts**: Configuración del servidor Angular Universal
+- **angular.json**: Configuración del proyecto Angular
+- **tsconfig.json**: Configuración de TypeScript.
+
+---
+
+## 🚀 Despliegue con Docker
+Para desplegar el portafolio en un servidor, se utiliza Docker.
+
+---
+
+## 🌍 Acceso y Configuración de Cloudflare
+El dominio está gestionado con Cloudflare, proporcionando seguridad y rendimiento adicionales.
